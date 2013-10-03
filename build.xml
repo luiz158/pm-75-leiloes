@@ -90,7 +90,7 @@
  	<target name="empacotar" depends="executar-os-testes" >
 	 	<war destfile="${build.dir}/agenda.war" webxml="WebContent/WEB-INF/web.xml">
 	    		<fileset dir="WebContent" />
-	    		<classes dir="build/classes" />
+	    		<classes dir="${build.dir}/classes" />
 	 	</war>
 	</target>
 	
