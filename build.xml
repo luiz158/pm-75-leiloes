@@ -87,6 +87,13 @@
 	
 	<property name="apache.tomcat7" value="apache-tomcat-7.0.42"/>
 	
+ 	<target name="empacotar" depends="executar-os-testes" >
+	 	<war destfile="${build.dir}/agenda.war" webxml="WebContent/WEB-INF/web.xml">
+	    		<fileset dir="WebContent" />
+	    		<classes dir="build/classes" />
+	 	</war>
+	</target>
+	
 	<target name="gera-war" depends="executar-os-testes">
 		<war destfile="${apache.tomcat7}/webapps/pm-75-leiloes.war">
 			<classes dir="${build.dir}/classes"/>
