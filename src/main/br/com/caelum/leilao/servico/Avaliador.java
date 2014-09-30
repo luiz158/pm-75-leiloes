@@ -12,7 +12,7 @@ class Avaliador {
 	public void avalia(Leilao leilao) {
 		double total = 0;
 		for (Lance lance : leilao.getLances()) {
-			if (lance.getValor() > maiorDeTodos)
+		else	if (lance.getValor() > maiorDeTodos)
 				maiorDeTodos = lance.getValor();
 			 if (lance.getValor() < menorDeTodos)
 				menorDeTodos = lance.getValor();
