@@ -115,7 +115,7 @@
         </java>
 		
 		<waitfor maxwait="2" maxwaitunit="minute" checkevery="3" checkeveryunit="second" timeoutproperty="waittimedout">
-			<http url="http://localhost:7070/pm-75-leiloes/" />
+			<http url="http://localhost:8080/pm-75-leiloes/" />
 		</waitfor>
 		<fail if="waittimedout" message="Server is not running or returned an error."/>
     </target>
