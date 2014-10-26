@@ -21,8 +21,8 @@
 	<target name="compilar">
 		<mkdir dir="${build.dir}/classes/"/>
 		<mkdir dir="${build.dir}/classes-teste/"/>
-		<javac destdir="${build.dir}/classes/" srcdir="src/main/" classpathref="libs.classpath" debug="true" encoding="UTF-8" />
-		<javac destdir="${build.dir}/classes-teste/" srcdir="src/test/" classpathref="tests.classpath" debug="true" encoding="UTF-8" />
+		<javac destdir="${build.dir}/classes/" includeantruntime="false" srcdir="src/main/" classpathref="libs.classpath" debug="true" encoding="UTF-8" />
+		<javac destdir="${build.dir}/classes-teste/" includeantruntime="false" srcdir="src/test/" classpathref="tests.classpath" debug="true" encoding="UTF-8" />
 	</target>
 	
 	<target name="executar-os-testes" depends="compilar">
