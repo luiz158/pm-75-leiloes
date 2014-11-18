@@ -3,7 +3,7 @@ package br.com.caelum.leilao.dominio;
 public class Lance {
 
 	private Usuario usuario;
-	private double valor;
+	private dowble valor;
 	
 	public Lance(Usuario usuario, double valor) {
 		this.usuario = usuario;
