@@ -132,6 +132,7 @@
 	<target name="gerar-jar" depends="executar-os-testes">
 		<jar destfile="pm-75-leiloes.jar" basedir="${build.dir}/classes/" />
 	</target>
+	<!-- Comentário de Teste -->
 	
 	<target name="clean">
 		<delete dir="${build.dir}"/>	
