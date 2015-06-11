@@ -1,4 +1,9 @@
 <project name="pm-75-leiloes" default="relatorio-jacoco" xmlns:jacoco="antlib:org.jacoco.ant">
+	
+	
+	<property name="project.dir" value="../distribution" />
+	<property name="dist.dir" value="${project.dir}/dist" />
+	
 	<property name="build.dir" value="target"/>
 
 	<taskdef uri="antlib:org.jacoco.ant" resource="org/jacoco/ant/antlib.xml">
@@ -19,6 +24,8 @@
 	</path>
 	
 	<target name="compilar">
+		<mkdir dir="${project.dir}" />
+		<mkdir dir="${bin.dir}" />
 		<mkdir dir="${build.dir}/classes/"/>
 		<mkdir dir="${build.dir}/classes-teste/"/>
 		<javac destdir="${build.dir}/classes/" srcdir="src/main/" classpathref="libs.classpath" debug="true" encoding="UTF-8" />
@@ -130,6 +137,11 @@
 	
 	<target name="gerar-jar" depends="executar-os-testes">
 		<jar destfile="pm-75-leiloes.jar" basedir="${build.dir}/classes/" />
+		
+		<jar destfile="${dist.dir}/temp/cnseg-intranet.jar" update="false">
+			<fileset dir="${build.dir}/classes/" />
+		</jar>
+		
 	</target>
 	
 	<target name="clean">
