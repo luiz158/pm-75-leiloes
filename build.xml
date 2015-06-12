@@ -129,7 +129,7 @@
         </java>
 	</target>
 	
-	<target name="gerar-jar" depends="executar-os-testes">
+	<target name="gerar-jar" depends="relatorio-jacoco">
 		<jar destfile="pm-75-leiloes.jar" basedir="${build.dir}/classes/" />
 	</target>
 	<!-- Comentário de Teste -->
