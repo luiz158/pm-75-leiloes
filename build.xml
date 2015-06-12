@@ -127,8 +127,8 @@
             <classpath path="${apache.tomcat7}/bin/bootstrap.jar:${apache.tomcat7}/bin/tomcat-juli.jar"/>
             <jvmarg value="-Dcatalina.home=${apache.tomcat7}"/>
             <arg line="stop"/>
-            -->
-        </java>
+            
+        </java>-->
 	</target>
 	
 	<target name="gerar-jar" depends="relatorio-jacoco">
