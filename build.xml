@@ -46,7 +46,7 @@
 	
 	<target name="executar-os-testes-de-integracao" depends="levanta-servidor-tomcat">
 		<property environment="env"/>
-		<property name="browser" value="chromedriveWIN"/>
+		<property name="browser" value="${env.browser}"/>
 		
 		<junit haltonfailure="true" showoutput="true" haltonerror="true" printsummary="true" fork="true" forkmode="once">
 			<sysproperty key="browser_driver" value="${browser}"/>
