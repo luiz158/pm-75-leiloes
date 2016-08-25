@@ -5,7 +5,6 @@ import br.com.caelum.leilao.dominio.Leilao;
 
 class Avaliador {   
 
-	//TESTE 123456
 	private double maiorDeTodos = Double.NEGATIVE_INFINITY; 
 	private double menorDeTodos = Double.POSITIVE_INFINITY;
 	private double media = 0;
@@ -15,7 +14,7 @@ class Avaliador {
 		for (Lance lance : leilao.getLances()) {
 			if (lance.getValor() > maiorDeTodos)
 				maiorDeTodos = lance.getValor();
-			if (lance.getValor() < menorDeTodos)
+			else if (lance.getValor() < menorDeTodos)
 				menorDeTodos = lance.getValor();
 			total += lance.getValor();
 		}
