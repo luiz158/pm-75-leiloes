@@ -9,8 +9,6 @@ class Avaliador {
 	private double menorDeTodos = Double.POSITIVE_INFINITY;
 	private double media = 0;
 
-//TESTE
-
 	public void avalia(Leilao leilao) {
 		double total = 0;
 		for (Lance lance : leilao.getLances()) {
